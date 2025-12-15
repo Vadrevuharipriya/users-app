@@ -1,0 +1,164 @@
+.lawyer-detail {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lawyer-detail img {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.lawyer-detail h2 {
+  margin: 0 0 20px 0;
+  color: #1a202c;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.lawyer-detail p {
+  margin: 10px 0;
+  color: #2d3748;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.lawyer-detail p strong {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.lawyer-detail button {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(66, 153, 225, 0.3);
+}
+
+.lawyer-detail button:hover {
+  background-color: #3182ce;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+}
+
+.lawyer-detail button:active {
+  transform: translateY(0);
+}
+
+.lawyer-detail > div {
+  flex: 1;
+  padding-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lawyer-detail {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .lawyer-detail img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .lawyer-detail h2 {
+    font-size: 24px;
+  }
+
+  .lawyer-detail > div {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .lawyer-detail button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .lawyer-detail {
+    margin: 15px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .lawyer-detail img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .lawyer-detail h2 {
+    font-size: 20px;
+  }
+
+  .lawyer-detail p {
+    font-size: 14px;
+  }
+}
+
+/* Error and Loading States */
+.error {
+  color: #e53e3e;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  background-color: #fed7d7;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(66, 153, 225, 0.2);
+  border-top-color: #4299e1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
